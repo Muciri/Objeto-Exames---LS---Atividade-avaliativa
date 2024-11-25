@@ -27,7 +27,7 @@ class Exam {
         for (let exam of this.exams) {
             avg += exam.nota;
         }
-        return avg / this.exams.length;  
+        return (avg / this.exams.length).toFixed(1);  
     }
     
     min() {
