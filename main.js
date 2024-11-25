@@ -16,11 +16,15 @@ const aluno2 = {
     values: { q1: 'c', q2: 'b', q3: 'a', q4: 'c', q5: 'd' },
 };
 
-//teste notas
-console.log(`a nota de ${aluno1.student} é: ${prova_t.nota(aluno1.values)} `);
-console.log(`a nota de ${aluno2.student} é: ${prova_t.nota(aluno2.values)} `);
-
 //teste add
 prova_t.add(aluno1);
 prova_t.add(aluno2);
 console.log(prova_t.exams);
+console.log(prova_t.avg())
+
+console.log('menor nota: ', prova_t.min())
+console.log('maior nota: ', prova_t.max())
+
+
+console.log('notas menores que 7:', prova_t.lt(7) )
+console.log('notas maiores que 7:', prova_t.gt(7) )
