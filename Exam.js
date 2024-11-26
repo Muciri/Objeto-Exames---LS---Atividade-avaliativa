@@ -51,23 +51,23 @@ class Exam {
     }
 
     lt(num){
-        let cont_gt = 0;
-        for(let exam of this.exams){
-            if(exam.nota < num){
-                cont_gt += 1;
-            }
-        }
-        return cont_gt
-    }
-
-    gt(num){
         let cont_lt = 0;
         for(let exam of this.exams){
-            if(exam.nota > num){
+            if(exam.nota < num){
                 cont_lt += 1;
             }
         }
         return cont_lt
+    }
+
+    gt(num){
+        let cont_gt = 0;
+        for(let exam of this.exams){
+            if(exam.nota > num){
+                cont_gt += 1;
+            }
+        }
+        return cont_gt
     }
     
 }
